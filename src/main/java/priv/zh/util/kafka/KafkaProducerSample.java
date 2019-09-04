@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import priv.zh.po.Student;
-SSSsss
 
 import java.util.Properties;
 
@@ -19,7 +18,7 @@ public class KafkaProducerSample {
         KafkaProducer<String,String> producer = new KafkaProducer<>(properties);
 
         Student record = new Student();
-        record.setAge((int)Math.floor(Math.random()*10));
+        record.setAge((int)Math.floor(Math.random()*10)/2);
         record.setName("zhaoheng"+(int)Math.floor(Math.random()*100));
         record.setSex(Math.random()<=0.5?"男":"女");
         record.setCountry(Math.random()<=0.5?"china":"us");
